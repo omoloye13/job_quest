@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:job_quest/features/home/screens/search_screen.dart';
+import 'package:job_quest/features/home/widgets/show_filter.dart';
 
 class SearchFilterWidget extends StatelessWidget {
   @override
@@ -17,21 +17,17 @@ class SearchFilterWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                GestureDetector(
-                  onTap: () {
-                    // Navigate to the search screen here
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => SearchScreen()));
-                  },
-                  child: Icon(Icons.search),
-                ),
+                Icon(Icons.search),
                 SizedBox(width: 8.0),
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'Search here...',
+                      hintText: 'UI/UX Design',
+                      hintStyle: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16.0,
+                        color: Colors.black,
+                      ),
                       border: InputBorder.none,
                     ),
                   ),
@@ -51,7 +47,12 @@ class SearchFilterWidget extends StatelessWidget {
             icon: Icon(Icons.filter_list),
             color: Colors.white,
             onPressed: () {
-              // Add your filter icon onPressed logic here
+              showModalBottomSheet(
+                  showDragHandle: true,
+                  context: context,
+                  builder: (context) {
+                    return ShowFilter();
+                  });
             },
           ),
         ),
@@ -59,3 +60,15 @@ class SearchFilterWidget extends StatelessWidget {
     );
   }
 }
+
+
+//  GestureDetector(
+//                   onTap: () {
+//                     // Navigate to the search screen here
+//                     Navigator.push(
+//                         context,
+//                         MaterialPageRoute(
+//                             builder: (context) => SearchScreen()));
+//                   },
+//                   child: Icon(Icons.search),
+//                 ),

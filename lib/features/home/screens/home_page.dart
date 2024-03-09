@@ -67,7 +67,7 @@ class _NavigationExampleState extends State<NavigationExample> {
             label: 'Message',
           ),
           NavigationDestination(
-            icon: Badge(child: Icon(Icons.home)),
+            icon: Badge(child: Icon(Icons.account_box_rounded)),
             label: 'Profile',
           ),
           NavigationDestination(

@@ -1,13 +1,11 @@
- 
-
-
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    // return const Placeholder();
+    return Center(child: Text('Profile Screen'));
   }
 }

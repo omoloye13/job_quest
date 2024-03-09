@@ -33,7 +33,7 @@ class RecentJobSection extends StatelessWidget {
           //   height: 5.0,
           // ),
           SizedBox(
-            height: 200,
+            height: 450,
             child: ListView(
               // scrollDirection: Axis.horizontal,
 
